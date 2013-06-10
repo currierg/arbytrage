@@ -16,11 +16,6 @@ def clean():
 
 # GIT FUNCTIONS
 
-
-def restart():
-    run('sudo restart uwsgi')
-
-
 def push(branch):
     switch(branch)
     git_command('push origin', branch=branch)
@@ -60,7 +55,7 @@ def status():
 
 
 def git_command(command, branch=''):
-    dirs = ['common', 'arya', 'mike']
+    dirs = ['arbytrage']
     for d in dirs:
         print "=" * 80
         print d
