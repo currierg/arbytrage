@@ -112,3 +112,11 @@ def average(action, amount, depth):
         return sell(amount, depth) / amount
     else:
         return -1
+
+if __name__=="__main__":
+    mtgox, btce = {}, {}
+
+    mtgox['bids'], mtgox['asks'] = depth_mtgox()
+    btce['bids'], btce['asks'] = depth_btce()
+
+    formulate_trade(mtgox, btce, 1000)
